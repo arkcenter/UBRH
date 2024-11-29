@@ -1,0 +1,273 @@
+<html><head><base href="https://example.com">
+<title>PC Building Resources & Guide</title>
+<style>
+:root {
+  --primary-color: #5865F2; /* Discord blue */
+  --secondary-color: #404EED;
+  --bg-color: #36393F; /* Discord dark theme */
+  --text-color: #DCDDDE;
+  --card-bg: #2F3136;
+  --accent: #7289DA;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(88, 101, 242, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(114, 137, 218, 0.1) 0%, transparent 20%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.1) 50%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.1) 50%, transparent 52%);
+  background-size: 30px 30px;
+  animation: heroPattern 30s linear infinite;
+}
+
+@keyframes heroPattern {
+  from { background-position: 0 0; }
+  to { background-position: 60px 60px; }
+}
+
+.discord-banner {
+  background: var(--accent);
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.new-badge {
+  background: #ED4245;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.resource-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover::after {
+  transform: scaleX(1);
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.resource-card h3 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+.resource-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+.tips-section {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tips-section h2 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tips-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tips-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.warning {
+  background: #ED4245;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+</style>
+</head>
+<body>
+  <div class="discord-banner">
+    <span>Join our Discord Community!</span>
+    <span class="new-badge">NEW</span>
+    <a href="https://discord.gg/kTjzPRetwK" class="resource-link" target="_blank">Join Now</a>
+  </div>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Ultimate PC Building Resource Hub</h1>
+      <p>All the essential tools and resources you need to build your perfect PC</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="resource-grid">
+      <div class="resource-card">
+        <h3>Price Checker</h3>
+        <p>Find current average prices to prevent overpaying for components</p>
+        <a href="https://averagefinder.com/" class="resource-link" target="_blank">Check Prices</a>
+      </div>
+
+      <div class="resource-card">
+        <h3>SSD Tier List</h3>
+        <p>Comprehensive SSD rankings to help you choose reliable storage</p>
+        <a href="https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit#gid=0" class="resource-link" target="_blank">View SSD Tiers</a>
+      </div>
+
+      <div class="resource-card">
+        <h3>PSU Tier List</h3>
+        <p>Critical power supply rankings for system longevity</p>
+        <a href="https://cultists.network/140/psu-tier-list/" class="resource-link" target="_blank">View PSU Tiers</a>
+      </div>
+
+      <div class="resource-card">
+        <h3>CPU Cooler Tier List</h3>
+        <p>CPU cooler performance rankings</p>
+        <a href="https://sites.google.com/view/cpucoolertierlist/home" class="resource-link" target="_blank">View Cooler Tiers</a>
+      </div>
+
+      <div class="resource-card">
+        <h3>CPU Hierarchy</h3>
+        <p>Compare CPU performance and find the best for your budget</p>
+        <a href="https://www.tomshardware.com/reviews/cpu-hierarchy,4312.html" class="resource-link" target="_blank">View CPU Rankings</a>
+      </div>
+
+      <div class="resource-card">
+        <h3>GPU Hierarchy</h3>
+        <p>Compare GPU performance and find the best for your budget</p>
+        <a href="https://www.tomshardware.com/reviews/gpu-hierarchy,4388.html" class="resource-link" target="_blank">View GPU Rankings</a>
+      </div>
+    </div>
+
+    <div class="tips-section">
+      <h2>Essential PC Building Tips</h2>
+      <ul class="tips-list">
+        <li>Ensure CPU and motherboard socket compatibility (e.g., LGA 1200 CPU needs LGA 1200 motherboard)</li>
+        <li>AMD AM4 CPUs work with AM4 motherboards, AM5 with AM5 motherboards</li>
+        <li>Always choose at least a Gold-rated power supply for reliability</li>
+        <li>For ITX cases, make sure to buy an ITX motherboard</li>
+        <li>Match monitor refresh rate with GPU capability (don't pair 60Hz monitor with high-end GPU)</li>
+        <li>Check fan direction: typically 3 intake in front, 1 exhaust in back</li>
+        <li>Build on a non-carpeted surface and avoid wearing socks (static electricity)</li>
+      </ul>
+
+      <div class="warning">
+        <strong>⚠️ Important Warning:</strong> Do not trust bottleneck calculators - they are inaccurate 95% of the time!
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add smooth scroll animation for cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    });
+
+    document.querySelectorAll('.resource-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'all 0.5s ease-out';
+      observer.observe(card);
+    });
+  </script>
+</body></html>
